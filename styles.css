@@ -1,0 +1,260 @@
+/* =========================
+   RESET CSS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background-color: #333;
+    color: white;
+
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.header h1 {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav {
+    background-color: #444;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+    padding: 15px 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #4dabf7;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.main-container {
+    display: flex;
+
+    flex: 1;
+
+    max-width: 1200px;
+    width: 100%;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.content {
+    flex: 3;
+
+    background-color: white;
+
+    padding: 30px;
+}
+
+.content h2 {
+    margin-bottom: 15px;
+}
+
+.content > p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+
+    min-width: 180px;
+
+    padding: 20px;
+
+    background-color: #f4f4f4;
+
+    border-radius: 8px;
+
+    border-left: 4px solid #333;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    flex: 1;
+
+    background-color: #e9ecef;
+
+    padding: 30px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar-item {
+    background-color: white;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border-radius: 6px;
+}
+
+.sidebar-item h3 {
+    margin-bottom: 8px;
+}
+
+.sidebar-item p {
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: #333;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Sidebar xuống dưới Content */
+    .main-container {
+        flex-direction: column;
+    }
+
+    /* Navigation chuyển thành cột */
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Card chuyển thành bố cục dọc */
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .content,
+    .sidebar {
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .header {
+        padding: 25px 15px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .content,
+    .sidebar {
+        padding: 20px;
+    }
+
+    .nav {
+        padding: 15px;
+    }
+
+}
